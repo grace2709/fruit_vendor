@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babcock University Fruit Vendor - Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container Styling */
+        .about, .page-content, .header, footer {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header and Footer Styling */
+        header, footer {
+            text-align: center;
+            background-color: #eaf2f1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        header p, footer p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Heading Styles */
+        h1, .page-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            border-bottom: 3px solid #16a085;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Section Styling */
+        .section, .privacy-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #eaf2f1;
+            border-radius: 5px;
+            border-left: 5px solid #16a085;
+        }
+
+        /* Navigation Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #16a085;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+
+        }
+
+        /* Form Styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group{
+            margin-bottom: 15px;
+        }
+        .form-group label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .submit-btn {
+            background-color: #16a085;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Fruit Section Styling */
+        .fruits-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .fruit {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #f0f3f4;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 15px;
+            transition: transform 0.3s;
+        }
+        .fruit:hover{
+            transform: scale(1.05);
+        }
+
+        .fruit img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #16a085;
+            margin-top: 10px;
+        }
+        
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .fruits-section {
+                flex-direction: column;
+            }
+
+            .fruit {
+                flex: 1 1 100%;
+            }
+
+            h1, .page-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <p><b>Babcock University Fruit Vendor</b></p>
+        <p>We provide you with the freshest fruits directly from the farm</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="shop.html">Shop Now</a>
+
+    </nav>
+
+    <!-- About Section -->
+    <div class="about" id="section">
+        <h1>About</h1>
+        <div class="section">
+            <h2>Our Story</h2>
+            <p>We are a campus-based fruit store dedicated to providing fresh and nutritious fruits to students and staff. Founded by the university’s agriculture department and an entrepreneurial team, we promote healthy eating and balanced diets.</p>
+            <p>We work directly with local farmers to ensure every piece of fruit meets our high standards for quality and freshness.</p>
+        </div>
+    </div>
+
+    <!-- Fruit Section -->
+    <section class="fruits-section">
+        <div class="fruit">
+            <img src="images/imag2.jpg" alt="Fresh Apples" />
+            <h2>Fresh Apples</h2>
+            <p>Juicy apples straight from the tree.</p>
+            <div class="price">&#8358;5,000</div>
+        </div>
+        <!-- Additional fruit items can be added similarly -->
+         <div class="fruit">
+            <img src="images/image1.jpg" alt="">
+            <h2>Mangoes</h2>
+            <p>Juicy and Fresh Mangoes</p>
+            <div class="price">&#8358;4000</div>
+         </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="page-content" id="contact-page">
+        <h1 class="page-title">Contact Us</h1>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Privacy Section -->
+    <div class="page-content" id="privacy-page">
+        <h1 class="page-title">Our Commitment to Your Privacy</h1>
+        <div class="privacy-section">
+            <h3>What Information Do We Collect?</h3>
+            <p>Your privacy is important to us. We collect only necessary information to improve your shopping experience.</p>
+            <ul>
+                <li>Your name and contact details</li>
+                <li>Order preferences and history</li>
+                <li>Payment information</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Babcock University Fruit Vendor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
