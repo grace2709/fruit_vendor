@@ -1,26 +1,66 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web of your workflow file to address the issue:
+
+ Apps CI/CD
 
 on:
   push:
     branches:
-      - main
+      - main```yaml
+name: Azure Static Web Apps CI/CD
+
+on:
+
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
 
 jobs:
+  push:
+    branches:
+      - main
+  pull_request:
+     build_and_deploy_job:
+    if: github.event_name == types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'push' || ( 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
+          lfs: false
+          persistgithub-credentials: false # Prevent reuse of Git credentials.event_name ==
+      - name: Install OIDC Client from Core Package
+        run: npm install @actions/core@ 'pull_request' && github.event.action !=1.6.0 @actions/http-client
+      - name: Get Id Token
+ 'closed')
+    runs-on: ubuntu-latest
+    name: Build        uses: actions/github-script@v6
+        id: idtoken
+        with:
+          script: |
+              const coredemo and Deploy Job
+    permissions:
+      id-token: = require('@actions/core')
+              return await coredemo.getIDToken()
+          result- write
+      contents: read
+    steps:
+      - uses:encoding: string
+      - name: Build And Deploy
+        id actions/checkout@v3
+        with:
+          submodules:: builddeploy
+        uses: Azure/static-web-app false # Disable submodules to prevent permission issues
           lfs: false
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
@@ -28,33 +68,44 @@ jobs:
         uses: actions/github-script@v6
         id: idtoken
         with:
-           script: |
-               const coredemo = require('@actions/core')
-               return await coredemo.getIDToken()
-           result-encoding: string
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
+          script: |
+              const coredemo = require('@actions/core')
+              return await coredemo.getIDTokens-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_GLACIER_065FCA21E }}
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
+          azure_static_web_apps()
+          result-encoding: string
+      - name: Build_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API And Deploy
+        id: builddeploy
+        uses_TOKEN_ORANGE_GLACIER_065FCA21E }}
+          action:: Azure/static-web-apps-deploy@v1
+        with:
+          "upload"
+          app_location: "/" # App source code azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC path
           api_location: "" # Api source code path - optional
-          output_location: ""  # Built app content directory - optional
-          app_build_command: "echo skipping Build"
-
+          output_location:_WEB_APPS_API_TOKEN_ORANGE_GLACIER_065FCA21 ""  # Built app content directory - optional
+          appE }}
+          action: "upload"
+          app_location: "/" # App source code path
+          api_location_build_command: "echo skipping Build"
           github_id_token: ${{ steps.idtoken.outputs.result }}
-          ###### End of Repository/Build Configurations ######
+: "" # Api source code path - optional
+          output_location: ""  # Built app content directory - optional```
+
+### Additional Notes
+- If this doesn't resolve the
+          app_build_command: "echo skipping Build"
+ issue, check the permissions of the runner environment or          github_id_token: ${{ steps.idtoken.outputs.result consider using a self-hosted runner with adequate permissions.
+- If your repository uses private sub }}
 
   close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    if: github.eventmodules, ensure the correct SSH key or credentials are_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    name: Close Pull Request Job
+    name: Close Pull set up.
+
+Let me know if you need further assistance! Request Job
     steps:
       - name: Close Pull Request
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          action: "close"
+          action
